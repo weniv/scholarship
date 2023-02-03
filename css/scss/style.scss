@@ -1,0 +1,150 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css');
+
+$maxWidth: 100;
+$max-width: min(1000px, calc(100% - 6rem));
+
+/* 기준 폰트 10px = 1rem */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #ffe187;
+  color: rgb(54, 43, 34);
+  font-family: 'Pretendard';
+  font-size: clamp(1.5rem, 1.8 / $maxWidth * 100vw, 1.8rem);
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+}
+main {
+  width: $max-width;
+  margin: auto;
+}
+section {
+  background: #fff;
+  padding: 3em 2.4em;
+  // border-radius: 1em;
+  &:not(:first-child) {
+    margin-top: 1px;
+  }
+}
+
+header {
+  margin: 2em auto 2em;
+  text-align: center;
+  img {
+    margin: auto;
+  }
+  .logo {
+    height: 1em;
+  }
+  .character {
+    width: min(60vw, 30rem);
+    transform: translateX(-3%);
+    margin-top: -1em;
+  }
+  p {
+    display: inline-block;
+    padding: 0.2em 2em;
+    margin-bottom: 0.5em;
+    border-radius: 1em;
+    color: #ef7c1a;
+    background: #fff;
+    font-size: 0.9em;
+  }
+  h1 {
+    font-size: 3.6em;
+    text-align: center;
+    line-height: 1.1;
+    span {
+      display: block;
+    }
+    strong {
+      font-weight: bold;
+      font-size: 0.85em;
+    }
+  }
+}
+section {
+  display: flex;
+
+  h2 {
+    flex: 0 0 10em;
+    font-weight: bold;
+    font-size: 1.3em;
+    line-height: 1.2;
+    span {
+      display: inline-block;
+    }
+  }
+
+  p {
+    word-break: keep-all;
+  }
+  ul {
+    li {
+      position: relative;
+      padding-left: 0.8em;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0.6em;
+        left: 0;
+        background: #ef7c1a;
+        width: 0.3em;
+        height: 0.3em;
+      }
+    }
+  }
+  strong {
+    font-weight: bold;
+    position: relative;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 0.6em;
+      position: absolute;
+      bottom: 0;
+      background: #ffe187;
+      mix-blend-mode: darken;
+    }
+  }
+
+  .flex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 641px) {
+    &.fac {
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    h2 {
+      flex-basis: auto;
+      margin-bottom: 0.8em;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  font-size: 0.9em;
+  margin: 5rem 0;
+}
+
+.btn {
+  padding: 0.4em 2em;
+  background: #ef7c1a;
+  color: #fff;
+  font-size: 0.85em;
+  border-radius: 0.2em;
+}

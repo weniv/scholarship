@@ -1,0 +1,144 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+/* 기준 폰트 10px = 1rem */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #ffe187;
+  color: rgb(54, 43, 34);
+  font-family: "Pretendard";
+  font-size: clamp(1.5rem, 1.8vw, 1.8rem);
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+}
+
+main {
+  width: min(1000px, 100% - 6rem);
+  margin: auto;
+}
+
+section {
+  background: #fff;
+  padding: 3em 2.4em;
+}
+section:not(:first-child) {
+  margin-top: 1px;
+}
+
+header {
+  margin: 2em auto 2em;
+  text-align: center;
+}
+header img {
+  margin: auto;
+}
+header .logo {
+  height: 1em;
+}
+header .character {
+  width: min(60vw, 30rem);
+  transform: translateX(-3%);
+  margin-top: -1em;
+}
+header p {
+  display: inline-block;
+  padding: 0.2em 2em;
+  margin-bottom: 0.5em;
+  border-radius: 1em;
+  color: #ef7c1a;
+  background: #fff;
+  font-size: 0.9em;
+}
+header h1 {
+  font-size: 3.6em;
+  text-align: center;
+  line-height: 1.1;
+}
+header h1 span {
+  display: block;
+}
+header h1 strong {
+  font-weight: bold;
+  font-size: 0.85em;
+}
+
+section {
+  display: flex;
+}
+section h2 {
+  flex: 0 0 10em;
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 1.2;
+}
+section h2 span {
+  display: inline-block;
+}
+section p {
+  word-break: keep-all;
+}
+section ul li {
+  position: relative;
+  padding-left: 0.8em;
+}
+section ul li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.6em;
+  left: 0;
+  background: #ef7c1a;
+  width: 0.3em;
+  height: 0.3em;
+}
+section strong {
+  font-weight: bold;
+  position: relative;
+}
+section strong::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 0.6em;
+  position: absolute;
+  bottom: 0;
+  background: #ffe187;
+  mix-blend-mode: darken;
+}
+section .flex {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 641px) {
+  section.fac {
+    align-items: center;
+  }
+}
+@media (max-width: 640px) {
+  section {
+    flex-direction: column;
+  }
+  section h2 {
+    flex-basis: auto;
+    margin-bottom: 0.8em;
+  }
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  font-size: 0.9em;
+  margin: 5rem 0;
+}
+
+.btn {
+  padding: 0.4em 2em;
+  background: #ef7c1a;
+  color: #fff;
+  font-size: 0.85em;
+  border-radius: 0.2em;
+}
