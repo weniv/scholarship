@@ -148,3 +148,18 @@ footer {
   font-size: 0.85em;
   border-radius: 0.2em;
 }
+
+.notice {
+  border-top: 4px solid #ef7c1a;
+
+  h2 {
+    line-height: 1.4;
+    span {
+      display: block;
+      font-weight: normal;
+      font-size: 0.7em;
+      padding-left: 1.8em;
+      color: #767676;
+    }
+  }
+}
