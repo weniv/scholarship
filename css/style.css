@@ -97,17 +97,7 @@ section strong {
   font-weight: bold;
   position: relative;
   z-index: 0;
-}
-section strong::before {
-  content: "";
-  display: inline-block;
-  width: 100%;
-  height: 0.6em;
-  position: absolute;
-  bottom: 0;
-  background: #ffe187;
-  mix-blend-mode: darken;
-  z-index: -1;
+  box-shadow: inset 0 -7px 0 #ffe187;
 }
 section .flex {
   width: 100%;
